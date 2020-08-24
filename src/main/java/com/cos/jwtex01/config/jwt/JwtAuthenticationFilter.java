@@ -95,7 +95,9 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
 		System.out.println("jwt.JwtAuthenticationFilter.java의  attemptAuthentication의 jwtToken= "+jwtToken);
 
 		response.addHeader(JwtProperties.HEADER_STRING, JwtProperties.TOKEN_PREFIX+jwtToken);
-		chain.doFilter(request, response);
+		System.err.println("이게보이면 jwt.JwtAuthenticationFilter.java의  98번째줄로 와보시오 그리고 밑에보시오");
+		//chain.doFilter(request, response);
+		//↑ 여기 왜잇는지몰겟음 일단 주석해놧는데 안되면 난제 풀어보시오
 	}
 
 }
